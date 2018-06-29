@@ -1,4 +1,6 @@
 *.pyc
-*.csv
 __pycache__
 .vscode
+resources/*
+*.csv
+*.json
