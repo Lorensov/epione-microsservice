@@ -12,5 +12,5 @@ def downloadFile(url, file_name):
         out_file.write(data)
     print("DONE!")
 
-downloadFile( "http://repositorio.dados.gov.br/saude/unidades-saude/unidade-basica-saude/ubs.csv", "resources/ubs.csv" )
+downloadFile( "http://repositorio.dados.gov.br/saude/unidades-saude/unidade-basica-saude/ubs.csv", "ubs.csv" )
 
