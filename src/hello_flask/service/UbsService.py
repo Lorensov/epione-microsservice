@@ -14,7 +14,7 @@ def pdConvertCSVtoJSON(filePath):
     "dsc_endereco": str,
     "nom_estab": str,
     "dsc_telefone": str
-    }).drop(
+    }).set_index('cod_cnes').drop(
         ['dsc_estrut_fisic_ambiencia',
         'dsc_adap_defic_fisic_idosos',
         'dsc_equipamentos',
@@ -25,10 +25,11 @@ def pdConvertCSVtoJSON(filePath):
     print(queriedDataframe.head())
     # print(dataFrame.loc["cod_munic":"530010", "vlr_latitude":])
     
-    json = queriedDataframe.to_json( orient='columns' )
-    print(json)
+    json = queriedDataframe.to_json( orient='index' )
+    # print(json)
 
     return json
     
-path = "src/hello_flask/resources/ubs.csv"
+# path = "src/hello_flask/resources/ubs.csv"
+path = "resources/ubs.csv"
 lol = pdConvertCSVtoJSON( path )
